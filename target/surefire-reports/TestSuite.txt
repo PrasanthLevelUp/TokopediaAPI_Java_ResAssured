@@ -1,20 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 6.076 sec <<< FAILURE! - in TestSuite
-inValidOrderStatus(testcases.ValidateOrder)  Time elapsed: 0.341 sec  <<< FAILURE!
+Tests run: 6, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 6.208 sec <<< FAILURE! - in TestSuite
+inValidOrderStatus(testcases.ValidateOrder)  Time elapsed: 0.334 sec  <<< FAILURE!
 java.lang.AssertionError: expected [400] but found [301]
 	at testcases.ValidateOrder.inValidOrderStatus(ValidateOrder.java:71)
 
-inValidOrderStatus(testcases.ValidateOrder)  Time elapsed: 0.336 sec  <<< FAILURE!
+inValidOrderStatus(testcases.ValidateOrder)  Time elapsed: 0.33 sec  <<< FAILURE!
 java.lang.AssertionError: expected [400] but found [301]
 	at testcases.ValidateOrder.inValidOrderStatus(ValidateOrder.java:71)
 
-inValidOrderID(testcases.ValidateOrder)  Time elapsed: 0.314 sec  <<< FAILURE!
+inValidOrderID(testcases.ValidateOrder)  Time elapsed: 0.312 sec  <<< FAILURE!
 java.lang.AssertionError: expected [404] but found [301]
 	at testcases.ValidateOrder.inValidOrderID(ValidateOrder.java:92)
 
-inValidOrderID(testcases.ValidateOrder)  Time elapsed: 0.322 sec  <<< FAILURE!
+inValidOrderID(testcases.ValidateOrder)  Time elapsed: 0.327 sec  <<< FAILURE!
 java.lang.AssertionError: expected [404] but found [301]
 	at testcases.ValidateOrder.inValidOrderID(ValidateOrder.java:92)
 

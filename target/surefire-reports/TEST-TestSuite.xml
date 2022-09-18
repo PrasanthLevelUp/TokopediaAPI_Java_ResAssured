@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="6.076" tests="6" errors="0" skipped="0" failures="4">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="6.208" tests="6" errors="0" skipped="0" failures="4">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17.0.2+8-LTS-86"/>
@@ -59,9 +59,9 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="validOrder" classname="testcases.ValidateOrder" time="1.914"/>
-  <testcase name="validOrder" classname="testcases.ValidateOrder" time="0.376"/>
-  <testcase name="inValidOrderStatus" classname="testcases.ValidateOrder" time="0.341">
+  <testcase name="validOrder" classname="testcases.ValidateOrder" time="2.084"/>
+  <testcase name="validOrder" classname="testcases.ValidateOrder" time="0.329"/>
+  <testcase name="inValidOrderStatus" classname="testcases.ValidateOrder" time="0.334">
     <failure message="expected [400] but found [301]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [301]
 	at testcases.ValidateOrder.inValidOrderStatus(ValidateOrder.java:71)
 </failure>
@@ -80,13 +80,13 @@ Body:
 {
     "order_status": "text",
     "order_description": "description_1",
-    "last_updated_timestamp": "1663522245",
-    "order_id": "RElQ",
+    "last_updated_timestamp": "1663526203",
+    "order_id": "cWDd",
     "special_order": true
 }
 ]]></system-out>
   </testcase>
-  <testcase name="inValidOrderStatus" classname="testcases.ValidateOrder" time="0.336">
+  <testcase name="inValidOrderStatus" classname="testcases.ValidateOrder" time="0.33">
     <failure message="expected [400] but found [301]" type="java.lang.AssertionError">java.lang.AssertionError: expected [400] but found [301]
 	at testcases.ValidateOrder.inValidOrderStatus(ValidateOrder.java:71)
 </failure>
@@ -105,13 +105,13 @@ Body:
 {
     "order_status": "1234",
     "order_description": "description_2",
-    "last_updated_timestamp": "1663522246",
-    "order_id": "NOiLNUPiqoRGaKp",
+    "last_updated_timestamp": "1663526203",
+    "order_id": "BHIeNQUVQNOrywE",
     "special_order": false
 }
 ]]></system-out>
   </testcase>
-  <testcase name="inValidOrderID" classname="testcases.ValidateOrder" time="0.314">
+  <testcase name="inValidOrderID" classname="testcases.ValidateOrder" time="0.312">
     <failure message="expected [404] but found [301]" type="java.lang.AssertionError">java.lang.AssertionError: expected [404] but found [301]
 	at testcases.ValidateOrder.inValidOrderID(ValidateOrder.java:92)
 </failure>
@@ -130,13 +130,13 @@ Body:
 {
     "order_status": "New",
     "order_description": "description_1",
-    "last_updated_timestamp": "1663522246",
-    "order_id": "KWTdmPAOnZNZGzkcTCtTFNGgMUKMhoYqZerYUJgFnfPFnTxJxVQHPMlIInlBngVgsZnCaixXwkCOZrWnFmBBsoLsfAwFZLIaEnUx",
+    "last_updated_timestamp": "1663526203",
+    "order_id": "RctMywbnfaObqQiAUlTIFprnegvsyOSrKiEtSozcdvpgPEkMMToeeiEXTWDqhIkcPsOhYbrEpesWnGtMDnPttMRjgLQSYXwyIchu",
     "special_order": true
 }
 ]]></system-out>
   </testcase>
-  <testcase name="inValidOrderID" classname="testcases.ValidateOrder" time="0.322">
+  <testcase name="inValidOrderID" classname="testcases.ValidateOrder" time="0.327">
     <failure message="expected [404] but found [301]" type="java.lang.AssertionError">java.lang.AssertionError: expected [404] but found [301]
 	at testcases.ValidateOrder.inValidOrderID(ValidateOrder.java:92)
 </failure>
@@ -155,8 +155,8 @@ Body:
 {
     "order_status": "New",
     "order_description": "description_2",
-    "last_updated_timestamp": "1663522246",
-    "order_id": "f",
+    "last_updated_timestamp": "1663526204",
+    "order_id": "w",
     "special_order": false
 }
 ]]></system-out>

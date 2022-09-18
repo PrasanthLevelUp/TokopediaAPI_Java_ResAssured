@@ -23,7 +23,7 @@ public class ValidateOrder extends BaseAPI {
 
     @BeforeClass
     public void classSetup() {
-        coreAPI = new CoreAPI();
+        coreAPI = CoreAPI.getInstance();
         user_authenticates();
     }
 

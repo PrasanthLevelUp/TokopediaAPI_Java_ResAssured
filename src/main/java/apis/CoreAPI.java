@@ -9,6 +9,15 @@ import static utils.ReusableFunctions.getTimeStamp;
 
 public class CoreAPI extends BaseAPI{
 
+    private static final CoreAPI instance = new CoreAPI();
+
+    //private constructor to avoid client applications to use constructor
+    private CoreAPI(){}
+
+    public static CoreAPI getInstance(){
+        return instance;
+    }
+
     public JSONObject getPayload(String id, String desc, String status, boolean specialOrder) {
 
         Order order = new Order();
