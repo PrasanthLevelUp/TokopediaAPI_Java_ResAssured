@@ -19,20 +19,29 @@ public class CoreAPI extends BaseAPI{
     }
 
     public JSONObject getPayload(String id, String desc, String status, boolean specialOrder) {
+        JSONObject jsonPayload;
 
-        Order order = new Order();
-        order.setOrder_id(id);
-        order.setOrder_description(desc);
-        order.setOrder_status(status);
-        order.setLast_updated_timestamp(getTimeStamp());
-        order.setSpecial_order(specialOrder);
-
-        JSONObject jsonPayload = new JSONObject(order);
+        try {
+            Order order = new Order();
+            order.setOrder_id(id);
+            order.setOrder_description(desc);
+            order.setOrder_status(status);
+            order.setLast_updated_timestamp(getTimeStamp());
+            order.setSpecial_order(specialOrder);
+            jsonPayload = new JSONObject(order);
+        }catch (Exception e){
+            throw new RuntimeException(e.getMessage());
+        }
         return jsonPayload;
     }
 
     public Response createOrder(RequestSpecification request, JSONObject payload) {
-        Response response = request.given().body(payload.toString()).log().all().when().post().then().extract().response();
+        Response response;
+        try {
+            response = request.given().body(payload.toString()).when().post().then().extract().response();
+        }catch (Exception e){
+            throw new RuntimeException(e.getMessage());
+        }
         return response;
     }
 
