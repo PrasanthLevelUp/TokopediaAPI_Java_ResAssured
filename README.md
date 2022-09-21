@@ -33,3 +33,8 @@ Reporting is by Allure API
 14. Maven command line execution
 15. Integration with Git
 16. Integration with Jenkins
+
+#How to run the tests?
+1. First way Open the termial and code the project location and run mvn command - mvn test
+2. Second way right click on the "TestSuite.xml" file
+3. Third way right click on the ValidateOrder inside testcases package
