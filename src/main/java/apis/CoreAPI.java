@@ -5,16 +5,18 @@ import io.restassured.specification.RequestSpecification;
 import org.json.JSONObject;
 import pojo.Order;
 
+import static utils.Constant.ORDER_PATH;
 import static utils.ReusableFunctions.getTimeStamp;
 
-public class CoreAPI extends BaseAPI{
+public class CoreAPI extends BaseAPI {
 
     private static final CoreAPI instance = new CoreAPI();
 
     //private constructor to avoid client applications to use constructor
-    private CoreAPI(){}
+    private CoreAPI() {
+    }
 
-    public static CoreAPI getInstance(){
+    public static CoreAPI getInstance() {
         return instance;
     }
 
@@ -29,7 +31,7 @@ public class CoreAPI extends BaseAPI{
             order.setLast_updated_timestamp(getTimeStamp());
             order.setSpecial_order(specialOrder);
             jsonPayload = new JSONObject(order);
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
         return jsonPayload;
@@ -38,8 +40,13 @@ public class CoreAPI extends BaseAPI{
     public Response createOrder(RequestSpecification request, JSONObject payload) {
         Response response;
         try {
-            response = request.given().body(payload.toString()).when().post().then().extract().response();
-        }catch (Exception e){
+            response = request
+                    .body(payload.toString())
+                    .when().
+                    post(ORDER_PATH).
+                    then()
+                    .extract().response();
+        } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
         return response;

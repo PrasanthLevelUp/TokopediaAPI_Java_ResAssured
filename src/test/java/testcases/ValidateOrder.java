@@ -1,11 +1,21 @@
 package testcases;
 
+/*
+==========================================
+Title:  Tokopedia | Step Definition
+Author: Prasanth K
+Date:   22 Sep 2022
+==========================================
+ */
+
 import apis.BaseAPI;
 import apis.CoreAPI;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
 import org.apache.http.HttpStatus;
+import org.hamcrest.Matchers;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -49,6 +59,10 @@ public class ValidateOrder extends BaseAPI {
             test.log(Status.PASS, "Order Last Updated Timestamp");
             Assert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK);
             test.log(Status.PASS, "Successful Status code validation " + HttpStatus.SC_OK);
+            // Getting ValidatableResponse type
+            ValidatableResponse valRes = response.then();
+            valRes.time(Matchers.lessThan(2000L));
+            test.log(Status.PASS, "Asserting response time is less than 2000 milliseconds");
         } catch (Exception e) {
             test.log(Status.FAIL, e.getMessage());
         }

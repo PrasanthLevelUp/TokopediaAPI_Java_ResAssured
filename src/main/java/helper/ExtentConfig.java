@@ -1,11 +1,11 @@
-package utils;
+package helper;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import java.io.File;
 
-import static utils.ConfigReader.EXTENT_CONFIG;
+import static helper.ConfigReader.EXTENT_CONFIG;
 import static utils.ReusableFunctions.getTimeStamp;
 
 public class ExtentConfig {

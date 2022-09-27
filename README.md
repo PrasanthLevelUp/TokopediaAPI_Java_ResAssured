@@ -38,3 +38,25 @@ Reporting is by Allure API
 1. First way Open the termial and code the project location and run mvn command - mvn test
 2. Second way right click on the "TestSuite.xml" file
 3. Third way right click on the ValidateOrder inside testcases package
+
+#Scenarios Covered
+1. Positive Flow:
+   * Valid input minimum and maximum length of order id
+   * Valid input order status
+   * Valid input timestamp
+2. Negative Flow:
+   * Invalid input such as invalid order id
+   * Invalid input such as invalid order status
+   * Invalid input such as invalid timestamp format
+   * Invalid header file type
+3. Error Message:
+   * Verify error message for different input data
+4. Security Flow:
+   * Invalid Authorization values in header
+   * Request without authorization header
+5. Performance Flow:
+   * Validate response time take for request
+   * Validate the latency for each request
+
+
+

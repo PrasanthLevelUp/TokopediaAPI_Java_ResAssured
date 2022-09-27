@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="/Users/prasanthkaruppaiya/Documents/APIProject"><classes><class name="testcases.ValidateOrder"><methods><include name="validOrder"/><include name="inValidOrderStatus"/><include name="inValidOrderID"/></methods></class></classes></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/prasanthkaruppaiya/Documents/APIProject">
+        <classes>
+            <class name="testcases.ValidateOrder">
+                <methods>
+                    <include name="validOrder"/>
+                    <include name="inValidOrderStatus"/>
+                    <include name="inValidOrderID"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

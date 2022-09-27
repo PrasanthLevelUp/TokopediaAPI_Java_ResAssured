@@ -1,10 +1,10 @@
-package utils;
+package helper;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-public class PropertyUtils {
+public class PropertyConfig {
 
 	public static String getProperty(String key) {
 		Properties prop = new Properties();
