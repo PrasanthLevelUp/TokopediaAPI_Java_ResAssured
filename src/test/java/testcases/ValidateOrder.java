@@ -59,7 +59,7 @@ public class ValidateOrder extends BaseAPI {
             test.log(Status.PASS, "Order Last Updated Timestamp");
             Assert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK);
             test.log(Status.PASS, "Successful Status code validation " + HttpStatus.SC_OK);
-            // Getting ValidatableResponse type
+            // Getting ValidatableResponse type to validate response time
             ValidatableResponse valRes = response.then();
             valRes.time(Matchers.lessThan(2000L));
             test.log(Status.PASS, "Asserting response time is less than 2000 milliseconds");

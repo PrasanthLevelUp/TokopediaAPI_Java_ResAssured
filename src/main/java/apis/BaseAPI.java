@@ -29,7 +29,8 @@ public class BaseAPI {
     public void user_authenticates() {
         //Authenticating the request using OAuth 2 token
         try {
-            request.auth().oauth2(this.getToken());
+            //request.auth().oauth2(this.getToken());
+            request.auth().oauth2(ConfigReader.getToken());
         } catch (Exception e) {
             throw new RuntimeException("User Authenticates Failure");
         }
